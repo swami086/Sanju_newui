@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///Users/swami/Documents/Sanju_NewUI/lib/supabase/server.ts"],"sourcesContent":["// Server client for server components and API routes\nimport { createServerClient } from '@supabase/ssr'\nimport { createClient as createSupabaseClient } from '@supabase/supabase-js'\nimport { cookies } from 'next/headers'\n\nexport async function createClient() {\n    const cookieStore = await cookies()\n\n    return createServerClient(\n        process.env.NEXT_PUBLIC_SUPABASE_URL!,\n        process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,\n        {\n            cookies: {\n                get(name: string) {\n                    return cookieStore.get(name)?.value\n                },\n            },\n        }\n    )\n}\n\n// Admin client for bypass RLS and Auth Admin operations\nexport function createAdminClient() {\n    return createSupabaseClient(\n        process.env.NEXT_PUBLIC_SUPABASE_URL!,\n        process.env.SUPABASE_SERVICE_ROLE_KEY!\n    )\n}\n"],"names":[],"mappings":";;;;;;AAAA,qDAAqD;AACrD;AAAA;AACA;AACA;;;;AAEO,eAAe;IAClB,MAAM,cAAc,MAAM,IAAA,4IAAO;IAEjC,OAAO,IAAA,iMAAkB,sUAGrB;QACI,SAAS;YACL,KAAI,IAAY;gBACZ,OAAO,YAAY,GAAG,CAAC,OAAO;YAClC;QACJ;IACJ;AAER;AAGO,SAAS;IACZ,OAAO,IAAA,gMAAoB,gFAEvB,QAAQ,GAAG,CAAC,yBAAyB;AAE7C"}}]
+}

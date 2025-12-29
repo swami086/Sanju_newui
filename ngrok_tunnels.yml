@@ -1,0 +1,15 @@
+version: "2"
+authtoken: 36Gzv9o2xysgESsuhERXJftPwTv_3qqrULXdQ7vvYS2zRMCeF
+tunnels:
+  sanju_sse:
+    proto: http
+    addr: 3845
+    host_header: rewrite
+    domain: equirotal-elbert-unproblematically.ngrok-free.dev
+  # swami_cursor:
+  #   proto: http
+  #   addr: 8765
+  #   domain: equirotal-elbert-unproblematically.ngrok-free.dev
+  # swami_mcp:
+  #   proto: http
+  #   addr: 27495
