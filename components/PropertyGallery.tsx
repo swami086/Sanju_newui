@@ -49,7 +49,7 @@ export default function PropertyGallery() {
     const displayItems = properties.length > 0 ? properties : fallbackItems;
 
     return (
-        <section className="bg-black py-24 border-t border-white/5">
+        <section id="property-gallery" className="bg-black py-24 border-t border-white/5">
             <div className="container-wide">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
