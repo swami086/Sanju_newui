@@ -54,12 +54,16 @@ export default function HeroSection() {
             >
               +91 81052 79639
             </Link>
-            <Link
+            <a
               href="#property-gallery"
-              className="inline-block bg-white/10 hover:bg-white/20 text-white backdrop-blur-md border border-white/20 px-10 py-4 rounded-full font-bold transition-all text-[16px] tracking-[0.5px] active:scale-95"
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById('property-gallery')?.scrollIntoView({ behavior: 'smooth' });
+              }}
+              className="inline-block bg-white/10 hover:bg-white/20 text-white backdrop-blur-md border border-white/20 px-10 py-4 rounded-full font-bold transition-all cursor-pointer text-[16px] tracking-[0.5px] active:scale-95"
             >
               Browse Properties
-            </Link>
+            </a>
           </motion.div>
         </div>
       </div>
